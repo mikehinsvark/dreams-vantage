@@ -666,30 +666,6 @@ button {
 
 .hero-carousel-dots button.active { width: 22px; background: #35f0d0; }
 
-.waiver-card {
-  position: absolute;
-  z-index: 5;
-  right: -1rem;
-  bottom: -2rem;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0.1rem 1rem;
-  align-items: center;
-  min-width: 285px;
-  border: 1px solid rgba(241,198,101,0.52);
-  border-radius: 18px;
-  background: rgba(7,15,27,0.94);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 35px rgba(241,198,101,0.09);
-  padding: 1rem 1.1rem;
-  backdrop-filter: blur(16px);
-}
-
-.waiver-card div { display: flex; flex-direction: column; gap: 0.1rem; }
-.waiver-card span { color: #93a8bd; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; }
-.waiver-card s { color: #f1c665; font-size: 1.2rem; font-weight: 800; }
-.waiver-card > strong { grid-row: span 2; color: #35f0d0; font-family: "Space Grotesk"; font-size: 2.6rem; line-height: 1; }
-.waiver-card small { grid-column: 1 / -1; color: #d4e0eb; font-size: 0.71rem; }
-
 .section-rail {
   position: fixed;
   z-index: 48;
@@ -775,8 +751,7 @@ button {
 .visual-gallery-section,
 .snapshot-section,
 .advantage-section,
-.steps-section,
-.faq-section {
+.steps-section {
   padding: clamp(5rem, 9vw, 8rem) 0;
 }
 
@@ -1039,17 +1014,6 @@ button {
 .invitation-callout span { display: flex; flex-direction: column; gap: 0.15rem; }
 .invitation-callout small { color: #8098af; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .invitation-callout strong { font-family: "Space Grotesk"; font-size: 1.06rem; }
-
-.faq-section { background: #08182a; }
-.faq-layout { display: grid; grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr); gap: clamp(2.5rem, 7vw, 6rem); }
-.contact-link { display: inline-flex; align-items: center; gap: 0.55rem; margin-top: 1.8rem; color: #52efd5; font-size: 0.78rem; font-weight: 800; }
-.faq-list { display: grid; gap: 0.7rem; }
-.faq-list details { border: 1px solid rgba(129,197,255,0.14); border-radius: 16px; background: rgba(5,16,31,0.64); }
-.faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.2rem; list-style: none; color: #eef6ff; font-family: "Space Grotesk"; font-size: 0.93rem; font-weight: 650; }
-.faq-list summary::-webkit-details-marker { display: none; }
-.faq-plus { display: grid; width: 30px; height: 30px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(53,240,208,0.24); border-radius: 9px; color: #35f0d0; font-size: 1.2rem; transition: transform 180ms ease; }
-.faq-list details[open] .faq-plus { transform: rotate(45deg); }
-.faq-list details p { margin: 0; padding: 0 1.2rem 1.25rem; color: #7f98b1; font-size: 0.8rem; line-height: 1.72; }
 
 .final-cta { position: relative; overflow: hidden; padding: clamp(5rem, 10vw, 8rem) 0; background: linear-gradient(180deg, #08182a, #030914); text-align: center; }
 .final-glow { position: absolute; top: 45%; left: 50%; width: 680px; height: 340px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(53,240,208,0.13), rgba(0,126,255,0.06) 38%, transparent 68%); }
@@ -1445,8 +1409,6 @@ button {
   .hero-slide-label { top: 0.65rem; left: 0.65rem; padding: 0.55rem 0.7rem; }
   .hero-slide-label strong { font-size: 0.7rem; }
   .hero-carousel-controls { bottom: 0.55rem; left: 0.55rem; }
-  .waiver-card { right: 0.75rem; bottom: -2.8rem; left: 0.75rem; min-width: 0; }
-  .film-section { padding-top: 6.7rem; }
   .film-stage { grid-template-columns: 1fr; }
   .film-copy-panel { min-height: auto; }
   .film-screen, .film-screen img { min-height: 0; aspect-ratio: 1.96 / 1; }
@@ -1456,7 +1418,7 @@ button {
   .visual-gallery-card figcaption strong { font-size: 0.82rem; white-space: normal; }
   .visual-gallery-card figcaption a { font-size: 0; }
   .visual-gallery-card figcaption a svg { width: 20px; height: 20px; }
-  .highlight-grid, .advantage-grid, .steps-grid, .faq-layout { grid-template-columns: 1fr; }
+  .highlight-grid, .advantage-grid, .steps-grid { grid-template-columns: 1fr; }
   .highlight-card { min-height: 260px; }
   .advantage-grid article { min-height: auto; }
   .brand-panel { border-radius: 20px; }
@@ -1489,7 +1451,6 @@ button {
   .hero-downloads { margin-top: 0.72rem; }
   .hero-download-buttons a { min-height: 58px; }
   .hero-proof { margin-top: 0.72rem; }
-  .waiver-card { bottom: -1.4rem; }
   .film-section { padding-top: 3.5rem; }
 }
 

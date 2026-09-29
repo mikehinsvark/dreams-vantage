@@ -18,7 +18,6 @@ import {
   Crown,
   Download,
   Film,
-  Gift,
   Landmark,
   Mail,
   Menu,
@@ -39,7 +38,7 @@ const assets = {
   film1: "/assets/film-renewals.webp",
   film2: "/assets/film-benefits.webp",
   film3: "/assets/film-legacy.webp",
-  partnership: "/assets/partnership.webp",
+  partnership: "/assets/partnership-current.webp",
   advantagesVisual: "/assets/vantage-advantages.webp",
   allianceLogos: "/assets/vantage-dreams-alliance.webp",
   strength: "/assets/strength-in-selection.pdf",
@@ -54,7 +53,6 @@ const pageSections = [
   { id: "visual-story", label: "Visual story" },
   { id: "advantage", label: "The advantage" },
   { id: "next-step", label: "Next step" },
-  { id: "faq", label: "Questions" },
 ];
 
 const heroSlides = [
@@ -87,7 +85,7 @@ const heroSlides = [
 const galleryImages = [
   {
     image: assets.partnership,
-    alt: "Vantage Financial Alliance with Dreams compensation and waived-fee overview",
+    alt: "Vantage Financial Alliance with Dreams compensation and opportunity overview",
     eyebrow: "01 · The opportunity",
     title: "A powerful partnership for a brighter tomorrow",
   },
@@ -218,31 +216,8 @@ const steps = [
   {
     number: "03",
     title: "Review and activate",
-    copy: "Follow the personalized link to review the terms and enroll with the standard $100 sign-up fee waived.",
+    copy: "Follow your personalized link to review the current terms, confirm your placement, and complete enrollment.",
     icon: BadgeCheck,
-  },
-];
-
-const faqs = [
-  {
-    question: "Is the Vantage sign-up fee really waived?",
-    answer:
-      "Yes. Eligible licensed Dreams agents who enroll through the personal invitation described in this announcement will have the standard $100 Vantage sign-up fee waived. Licensing, carrier-appointment, background-check, or other third-party requirements may still apply.",
-  },
-  {
-    question: "Where is my enrollment link?",
-    answer:
-      "Your personal invitation link is being prepared and will arrive separately. Please use that individual link so your waived-fee eligibility and hierarchy placement can be handled correctly.",
-  },
-  {
-    question: "Can I share my personal invitation link?",
-    answer:
-      "Please do not share it. The enrollment link is intended for the named Dreams agent. Questions about another agent's eligibility should be sent to the Dreams team.",
-  },
-  {
-    question: "Are the commission percentages guaranteed?",
-    answer:
-      "No. The 143% figure is Vantage's published total field payout, not an individual contract. The personal contract schedule reaches up to 115% for qualified promotion levels. Actual compensation depends on licensing, contracting, product, carrier, production, placement, good standing, and current plan terms. No income is guaranteed.",
   },
 ];
 
@@ -340,9 +315,9 @@ export default function Home() {
       </a>
 
       <div className="announcement-bar">
-        <span>Dreams Agent Exclusive</span>
-        <strong>Standard $100 Vantage enrollment fee waived</strong>
-        <span>Personal invitation link arriving separately</span>
+        <span>Dreams Agent Opportunity</span>
+        <strong>Explore Vantage Financial Alliance with Dreams</strong>
+        <span>Watch the three-film introduction</span>
       </div>
 
       <header className="site-header">
@@ -451,7 +426,7 @@ export default function Home() {
                 Your next chapter comes with an <em>invitation.</em>
               </motion.h1>
               <motion.p className="hero-lead" variants={fadeUp} transition={{ duration: 0.5 }}>
-                Dreams Insurance Solutions is opening an exclusive path to Vantage Financial Alliance—with a personal enrollment link and the standard <strong>$100 sign-up fee waived.</strong>
+                Dreams Insurance Solutions is opening an exclusive path to Vantage Financial Alliance—bringing together a powerful compensation platform, field support, and long-term opportunity.
               </motion.p>
               <motion.div className="hero-actions" variants={fadeUp} transition={{ duration: 0.5 }}>
                 <a className="button button-primary" href={videoHub} target="_blank" rel="noreferrer">
@@ -510,7 +485,7 @@ export default function Home() {
               </motion.div>
               <motion.div className="hero-proof" variants={fadeUp} transition={{ duration: 0.5 }}>
                 <span><Check size={15} /> Personalized enrollment</span>
-                <span><Check size={15} /> Waived $100 fee</span>
+                <span><Check size={15} /> Dedicated field support</span>
                 <span><Check size={15} /> Dreams hierarchy placement</span>
               </motion.div>
             </motion.div>
@@ -570,14 +545,6 @@ export default function Home() {
                     <ChevronRight size={18} />
                   </button>
                 </div>
-              </div>
-              <div className="waiver-card">
-                <div>
-                  <span>Standard enrollment fee</span>
-                  <s>$100</s>
-                </div>
-                <strong>$0</strong>
-                <small>for eligible invited Dreams agents</small>
               </div>
             </motion.div>
           </div>
@@ -772,35 +739,12 @@ export default function Home() {
 
             <div className="invitation-callout">
               <div>
-                <Gift size={28} />
-                <span><small>Dreams agent exclusive</small><strong>Your standard $100 sign-up fee is waived.</strong></span>
+                <Sparkles size={28} />
+                <span><small>Dreams × Vantage</small><strong>A stronger platform for your next chapter.</strong></span>
               </div>
               <a className="button button-primary" href={videoHub} target="_blank" rel="noreferrer">
                 Watch before your link arrives <Play size={18} fill="currentColor" />
               </a>
-            </div>
-          </div>
-        </section>
-
-        <section className="faq-section" id="faq">
-          <div className="container faq-layout">
-            <div>
-              <SectionHeading
-                eyebrow="Quick clarity"
-                title={<>Questions, <em>answered.</em></>}
-                copy="The official invitation and contracting materials control. These answers are here to help you prepare."
-              />
-              <a className="contact-link" href="mailto:marketing@dreamsresources.com?subject=Dreams%20Vantage%20Invitation%20Question">
-                <Mail size={18} /> Questions? Email the Dreams team
-              </a>
-            </div>
-            <div className="faq-list">
-              {faqs.map((faq, index) => (
-                <details key={faq.question} open={index === 0}>
-                  <summary><span>{faq.question}</span><span className="faq-plus">+</span></summary>
-                  <p>{faq.answer}</p>
-                </details>
-              ))}
             </div>
           </div>
         </section>
@@ -851,7 +795,7 @@ export default function Home() {
             <a href={assets.advantage} target="_blank" rel="noreferrer">Vantage Advantage <span>↗</span></a>
             <a href={assets.strength} target="_blank" rel="noreferrer">Strength in Selection <span>↗</span></a>
             <a href="#next-step">Enrollment next steps <span>↘</span></a>
-            <a href="#faq">Invitation questions <span>↘</span></a>
+            <a href="mailto:marketing@dreamsresources.com?subject=Dreams%20Vantage%20Question">Contact the Dreams team <span>↗</span></a>
           </nav>
 
           <nav className="footer-column" aria-label="DBR ecosystem">
@@ -862,9 +806,9 @@ export default function Home() {
           </nav>
 
           <div className="footer-invitation">
-            <h3>Dreams agent exclusive</h3>
-            <div><span>Standard sign-up fee</span><s>$100</s><strong>$0</strong></div>
-            <p>Your personal invitation link arrives separately. Use that unique link to preserve waived-fee eligibility and hierarchy placement.</p>
+            <h3>Built for Dreams agents</h3>
+            <div><span>Opportunity platform</span><strong>Vantage</strong></div>
+            <p>Review current enrollment terms through your invitation and official contracting materials.</p>
           </div>
         </div>
 
@@ -892,7 +836,7 @@ export default function Home() {
         </div>
         <div className="container legal">
           <p>
-            For licensed insurance professionals. Educational and recruiting communication only; not a product solicitation. The standard $100 sign-up-fee waiver applies only to eligible Dreams agents enrolling through their personal invitation. Compensation, advances, payment timing, bonuses, contests, conventions, vesting, legacy, re-insurance, and equity opportunities are subject to current agreements, carrier rules, qualification requirements, good standing, availability, and change. The 143% figure is total field payout and is not an individual agent contract level. Personal contract levels reach up to 115% for qualified promotion levels. Advances are subject to carrier and chargeback terms. Individual results vary; no income is guaranteed.
+            For licensed insurance professionals. Educational and recruiting communication only; not a product solicitation. Enrollment, licensing, contracting, carrier appointment, background-check, and other requirements are subject to current terms. Compensation, advances, payment timing, bonuses, contests, conventions, vesting, legacy, re-insurance, and equity opportunities are subject to current agreements, carrier rules, qualification requirements, good standing, availability, and change. The 143% figure is total field payout and is not an individual agent contract level. Personal contract levels reach up to 115% for qualified promotion levels. Advances are subject to carrier and chargeback terms. Individual results vary; no income is guaranteed.
           </p>
           <span>© 2026 Dreams Insurance Solutions</span>
         </div>
